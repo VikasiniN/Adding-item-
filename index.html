@@ -1,0 +1,41 @@
+<html ng-app="myApp">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js  ">
+            </script>
+            <script src="add.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" />
+    </head>
+    <body>
+        
+      
+        <div ng-controller="myCtr">
+
+
+         
+                 <table border="1" class="table table-striped">
+                    <tr>
+                        <th>name</th>
+                        <th>password</th>
+                    </tr>
+                    <tr ng-repeat="x in users">
+                        <td>{{x.name}}</td>
+                        <td>{{x.password}}</td>
+                    </tr>
+                </table>
+
+
+                <form ng-submit="Addusers()" class="form-group">
+                        <div class="col-md-8" >
+                    <input type="text" ng-model="name" class="form-control"  placeholder="enter the name"><br>
+                    </div>
+                    <div class="col-md-8">
+                    <input type="password" ng-model="password"  class="form-control" placeholder="enter the password"><br>
+                </div>
+                <div class="col-md-8">
+                    <input type="submit" class="form-control;btn btn-info" value="submit" >
+                </div>
+                </form> 
+     </div>
+    </body>
+
+</html>
